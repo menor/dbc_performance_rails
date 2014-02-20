@@ -16,8 +16,7 @@ We have a pre-built Rails application with two models: `User` and `KarmaPoint`. 
 Get the application running as follows:
 
 ```text
-$ git clone git://github.com/Devbootcamp/karmaville.git
-$ cd karmaville
+$ cd source
 $ bundle install
 $ rake db:setup
 ```
