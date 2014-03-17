@@ -19,12 +19,7 @@ class User < ActiveRecord::Base
 
   def self.by_karma
     order('total_karma DESC')
-    # joins(:karma_points).group('users.id').order('SUM(karma_points.value) DESC')
   end
-
-  # def total_karma
-  #   self.karma_points.sum(:value)
-  # end
 
   def update_karma!(value)
     self.update_attribute(:total_karma, self.total_karma += value)
