@@ -8,8 +8,6 @@ class KarmaPoint < ActiveRecord::Base
   validates :label, :presence => true
 
   def update_user_total
-    user = User.find(user_id)
-    user.total_karma += value
-    user.save
+    user.update_karma!(value)
   end
 end

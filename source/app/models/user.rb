@@ -26,6 +26,10 @@ class User < ActiveRecord::Base
   #   self.karma_points.sum(:value)
   # end
 
+  def update_karma!(value)
+    self.update_attribute(:total_karma, self.total_karma += value)
+  end
+
   def full_name
     "#{first_name} #{last_name}"
   end
