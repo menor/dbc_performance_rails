@@ -3,3 +3,4 @@ class UsersController < ApplicationController
     @users = User.by_karma.limit(50)
   end
 end
+
